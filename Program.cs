@@ -7,6 +7,7 @@ namespace myApp3
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World from myApp3!");
+            Console.WriteLine("Changed to get SonarQube working!");
         }
     }
 }
