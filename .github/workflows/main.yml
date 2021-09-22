@@ -1,42 +1,21 @@
 on:
   workflow_dispatch:
-  pull_request:
-    branches: 
-      - develop
-      - release/**
-      - feature/**
 
+name: Main Workflow
 jobs:
-  validate-changes:
+  sonarcloud:
+    name: SonarCloud
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.2.0
-        with:
-          # Disabling shallow clone is recommended for improving relevancy of sonarqube reporting
-          fetch-depth: 0
-
-      - name: Setup dotnet
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '5.0.x'
-
-      - name: Install dependencies
-        run: dotnet restore
-
-      - name: Sonarqube Begin
-        run: | 
-          dotnet tool install --global dotnet-sonarscanner
-          dotnet sonarscanner begin /o:willmacaulay /k:WillMacaulay_myApp3 /d:sonar.login=${{ secrets.SONAR_TOKEN }} /s:$GITHUB_WORKSPACE/SonarQube.Analysis.xml
-
-      - name: Build
-        run: dotnet build
-
-      - name: Test with the dotnet CLI
-        run: dotnet test --settings coverlet.runsettings --logger:trx
-        env:
-          ASPNETCORE_ENVIRONMENT: Development
-
-      - name: Sonarqube end
-        run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: SonarScanner for .NET 5 with pull request decoration support
+      uses: highbyte/sonarscan-dotnet@2.0
+      with:
+        # The key of the SonarQube project
+        sonarProjectKey: your_projectkey
+        # The name of the SonarQube project
+        sonarProjectName:  your_projectname
+        # The name of the SonarQube organization in SonarCloud. For hosted SonarQube, skip this setting.
+        sonarOrganization: your_organization
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
