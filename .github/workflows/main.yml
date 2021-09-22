@@ -11,11 +11,11 @@ jobs:
       uses: highbyte/sonarscan-dotnet@2.0
       with:
         # The key of the SonarQube project
-        sonarProjectKey: your_projectkey
+        sonarProjectKey: WillMacaulay_myApp3
         # The name of the SonarQube project
-        sonarProjectName:  your_projectname
+        sonarProjectName:  WillMacaulay_myApp3
         # The name of the SonarQube organization in SonarCloud. For hosted SonarQube, skip this setting.
-        sonarOrganization: your_organization
+        sonarOrganization: willmacaulay
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
