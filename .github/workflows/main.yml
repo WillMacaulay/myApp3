@@ -15,7 +15,7 @@ jobs:
         # The name of the SonarQube project
         sonarProjectName:  WillMacaulay_myApp3
         # The name of the SonarQube organization in SonarCloud. For hosted SonarQube, skip this setting.
-        sonarOrganization: willmacaulay
+        sonarOrganization: WillMacaulay
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
