@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GNZ8p79qMjDG1bCmtzLx/cnHFyrjf0h89/txxOt18bcnt3dYeik509H7Nq28dGfhXjVL74jMluCOSxKK3k0Vaw==",
+  "dgSpecHash": "0LM5ugLdKEiSgfSdMF2TlZCgvcLUN7+SFKAsIaIS0gFHAQ6SHr6po6F/8iO/7aWmp5VQuOBYu+EhUi44mNweRg==",
   "success": true,
-  "projectFilePath": "C:\\devops\\myapp3\\myApp3.csproj",
+  "projectFilePath": "C:\\devops\\myapp3\\myApp3.csProj",
   "expectedPackageFiles": [],
   "logs": []
 }

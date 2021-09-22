@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\devops\\myapp3\\myApp3.csproj": {}
+    "C:\\devops\\myapp3\\myApp3.csProj": {}
   },
   "projects": {
-    "C:\\devops\\myapp3\\myApp3.csproj": {
+    "C:\\devops\\myapp3\\myApp3.csProj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\devops\\myapp3\\myApp3.csproj",
+        "projectUniqueName": "C:\\devops\\myapp3\\myApp3.csProj",
         "projectName": "myApp3",
-        "projectPath": "C:\\devops\\myapp3\\myApp3.csproj",
+        "projectPath": "C:\\devops\\myapp3\\myApp3.csProj",
         "packagesPath": "C:\\Users\\WillMacaulay\\.nuget\\packages\\",
         "outputPath": "C:\\devops\\myapp3\\obj\\",
         "projectStyle": "PackageReference",
