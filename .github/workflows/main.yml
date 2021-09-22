@@ -55,6 +55,7 @@ jobs:
           # from https://sonarcloud.io/account/security/
           # The organization and project arguments (see /o and /k) are displayed
           # on the project dashboard in SonarCloud.
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"WillMacaulay_myApp3" /o:"sonarsource" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           dotnet build myapp3.sln
