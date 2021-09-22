@@ -12,14 +12,12 @@ on:
 name: Main Workflow
 jobs:
   sonarcloud:
-    name: dotnet-sonarscanner
-      uses: spoland/dotnet-sonarcloud-analysis@v1.0
-      with:
+    name: dotnet-sonarcloud-analysis
+    uses: spoland/dotnet-sonarcloud-analysis@v1.0
+    with:
         project-key: WillMacaulay_myApp3
         sonar-host-url: https://sonarcloud.io
         sonar-organization: willmacaulay
-        opencover-reports-paths: "**/*.opencover.xml"
-      env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
